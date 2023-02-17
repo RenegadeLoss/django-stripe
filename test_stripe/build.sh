@@ -3,5 +3,6 @@ set -o errexit
 pip install poetry
 poetry install
 
-python manage.py collectstatic --no-input
-python manage.py migrate
+cd /opt/render/project/src
+poetry run python manage.py collectstatic --no-input
+poetry run python manage.py migrate
